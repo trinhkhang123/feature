@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class TelexWordCounter {
 
     public static int countTelexWords(String inputStr) {
@@ -26,7 +27,10 @@ public class TelexWordCounter {
     }
 
     public static void main(String[] args) {
-        String input = "hwfdawhwhcoomddfgwdc";
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("input: ");
+        String input = scanner.nextLine();
+        scanner.close();
         int result = countTelexWords(input);
         System.out.println("Output: " + result); 
     }
